@@ -1,98 +1,228 @@
-<!--HTML 문서 기본 구조-->
 <!DOCTYPE html>
 <HTML>
-<HEAD>
-  <title> 웹 프로그래밍 </title>
-</HEAD>
+<HEAD><title> 1차, 개인 프로젝트 계획서 </title></HEAD>
+
+
+
+<style>
+
+</style>
+
+
+
+
 <BODY>
-  이름: 조은영 <br>
-  학부(과): 공과대학 화학공학과 <br>
-  전자우편: jnh4538@naver.com <br>
-  <br>
-  자기 &nbsp; 소개 <br>
-  좋아하는 것 <br>
-  <ul> <li> 가나다 </li>
-       <li> 가가가 </li>
-  </ul>
-  <ol><li> 001 </li>
-    <li> 002 </li>
-  </ol>
-  
+
+<a id=Top> </a>
+
+<h2 style="text-align:center;"> "자기소개" </h2>
+
+<fieldset>
+<legend> 북마크 </legend>
+<a href=#Chapter01> Chapter01 </a> &nbsp;
+<a href=#Chapter02> Chapter02 </a> &nbsp;
+<a href=#Chapter03> Chapter03 </a> &nbsp;
+<a href=#Chapter04> Chapter04 </a> &nbsp;
+<a href=#Chapter05> Chapter05 </a> &nbsp;
+</fieldset>
+
+
 <br>
-  
-<h3> 검색엔진 </h3>
+<h3 id=Chapter01> Chapter 01. 검색엔진 </h3>
 <ul>
-    <li> <a href="https://www.google.com"> 구글(google) </a>
-    <li> <a href="https://www.naver.com" target=_self> 네이버(naver) </a>
-    <li> <a href="https://www.daum.net" target=_blank> 다음(Daum) </a>
+    <li> <a href="https://www.google.com"> 구글(Google) </a>
+    <li> <a href="https://www.naver.com" target=_self> 네이버(NAVER) </a>
+    <li> <a href="https://www.daum.net" target=_blank> 다음(Daum) 새로운 창 </a>
 </ul>
 
+
+<br>
+<h3 id=Chapter02> Chapter 02. 자주가는 사이트 </h3>
+<a href="https://klas.kw.ac.kr/std/cmn/frame/Frame.do" type="text/html"> KLAS 종합정보서비스 </a>
+
+<p align=center>
+문의: <a href="mailto: jnh4538@naver.com"> jnh4538@naver.com </a>
+</p>
+
+
+<br>
+<h3 id=Chapter03> Chapter 03. 나의 정보 </h3>
+<fieldset>
+<legend> 나의 이름 </legend> <!-- legend 태그 : 캡션 정의-->
+<form name="이름" action="https://eunyoung6.github.io/" method="GET">
+        <!--input 태그: type 속성-->
+        First name : <input type="text" name="firstname" value="은영"> <br>
+        Last name : <input type="text" name="lastname" value="조"> <br>
+
+        <input type="hidden" name="alias" value="Eunyoung"> <br>
+
+        <!-- type 속성 : 버튼 정의-->
+        <input type="submit" value="제출">
+        <input type="reset" value="초기화">
+        
+</form>
+</fieldset>
+
+
+
+<br>
+<!--색깔, 숫자, 범위 선택-->
+<form name="Eunyoung" action="https://eunyoung6.github.io/" method="GET">
+퍼스널컬러 : <input type="color" name="favorite_color" value="#00ff00"> <br>
+학년(1~4학년) : <input type="number" name="grade" min="1" max="4" value="3"> <br>
+성향(0~100) : 내향 <input type="range" name="volume" min="0" max="100"> 외향 <br>
+<br>
+        <!-- type 속성 : 버튼 정의-->
+        <input type="submit" value="제출">
+        <input type="reset" value="초기화">
+
+</form>
+
+
+<!-- JavaScript : oninput 이벤트 -- 사용자 입력 시 발생-->
+<p> 입력 필드에 텍스트를 입력하시오 </p>
+<input type="text" id="myInput" oninput="myFunction()" size="50">
+
+<p id="demo"> </p>
+
+<script>
+    function myFunction() {
+        var temp=document.getElementById("myinput").value;
+        document.getElementById("demo").innerHTML="사용자 입력 :" +temp;
+    }
+</script>
+
+
+<h4> 이공계 </h4>
+<!-- 옵션 그룹화 optgroup 태그 -- @작동이 안되니 체크하기@ -->
+<select>
+    <optgroup label="공과대학">
+        <option value="Architectural_Engineering" 건축공학과> </option>
+        <option value="Environmental_Engineering" 환경공학과> </option>
+        <option value="Chemical_Engineering" 화학공학과>  </option>
+        <option value="Architecture" 건축학과> </option>
+
+    </optgroup>
+
+
+</select>
+<br>
+
+
+
+
+<br>
+<!-- 시간표 작성하기 -->
 <table width=100% border="1">
-        <tr>
-                <td> </td>
-                <td> 월</td>
-                <td> 화</td>
-                <td> 수</td>
-                <td> 목</td>
-                <td> 금</td>
-        </tr>
+    2020학년 2학기 시간표 
+    <tr>
+            <td> </td>
+            <td> 월</td>
+            <td> 화</td>
+            <td> 수</td>
+            <td> 목</td>
+            <td> 금</td>
+    </tr>
 
-        <tr>
-                <td> 1교시 </td>
-                <td> &nbsp; </td>
-                <td> &nbsp; </td>
-                <td> &nbsp; </td>
-                <td> &nbsp; </td>
-                <td> &nbsp; </td>
-        </tr>
+    <tr>
+            <td> 1교시 </td>
+            <td> 공정제어 </td>
+            <td> &nbsp; </td>
+            <td> &nbsp; </td>
+            <td> 화공기초실험 </td>
+            <td> 단위조작실험 </td>
+    </tr>
 
-        <tr>
-                <td> 2교시 </td>
-                <td> &nbsp; </td>
-                <td> &nbsp; </td>
-                <td> &nbsp; </td>
-                <td> &nbsp; </td>
-                <td> &nbsp; </td>
-        </tr>
+    <tr>
+            <td> 2교시 </td>
+            <td> &nbsp; </td>
+            <td> &nbsp; </td>
+            <td> 공정제어 </td>
+            <td> 화공기초실험 </td>
+            <td> 단위조작실험 </td>
+    </tr>
 
-        <tr>
-                <td> 3교시 </td>
-                <td> &nbsp; </td>
-                <td> &nbsp; </td>
-                <td> &nbsp; </td>
-                <td> &nbsp; </td>
-                <td> &nbsp; </td>
-        </tr>
+    <tr>
+            <td> 3교시 </td>
+            <td> &nbsp; </td>
+            <td> &nbsp; </td>
+            <td> 열전달 </td>
+            <td> &nbsp; </td>
+            <td> &nbsp; </td>
+    </tr>
 
-        <tr>
-                <td> 4교시 </td>
-                <td> &nbsp; </td>
-                <td> &nbsp; </td>
-                <td> &nbsp; </td>
-                <td> &nbsp; </td>
-                <td> &nbsp; </td>
-        </tr>
+    <tr>
+            <td> 4교시 </td>
+            <td> 열전달 </td>
+            <td> &nbsp; </td>
+            <td> &nbsp; </td>
+            <td> &nbsp; </td>
+            <td> &nbsp; </td>
+    </tr>
 
-        <tr>
-                <td> 5교시 </td>
-                <td> &nbsp; </td>
-                <td> &nbsp; </td>
-                <td> &nbsp; </td>
-                <td> &nbsp; </td>
-                <td> &nbsp; </td>
-        </tr>
+    <tr>
+            <td> 5교시 </td>
+            <td> &nbsp; </td>
+            <td> 캡스톤 </td>
+            <td> 산업생물공학 </td>
+            <td> 진로탐색 </td>
+            <td> &nbsp; </td>
+    </tr>
 
-        <tr>
-                <td> 6교시 </td>
-                <td> &nbsp; </td>
-                <td> &nbsp; </td>
-                <td> &nbsp; </td>
-                <td> &nbsp; </td>
-                <td> &nbsp; </td>
-        </tr>
+    <tr>
+            <td> 6교시 </td>
+            <td> 산업생물공학 </td>
+            <td> 캡스톤 </td>
+            <td> &nbsp; </td>
+            <td> &nbsp; </td>
+            <td> &nbsp; </td>
+    </tr>
 </table>
 
- 
+
+<br>
+<h3 id=Chapter04> Chapter 04. 내가 좋아하는 것들 </h3>
+
+<fieldset>
+    <legend> 좋아하는 음료수 </legend>
+    <select name="drinking" size="3" multiple>
+        <option value="Toreta" selected> 토레타 </option>
+        <option value="coca-cola"> 코카콜라 </option>
+        <option value="coffee"> 커피 </option>
+        <option value="milk"> 우유 </option>
+    </select>
+</fieldset>
+
+
+
+
+<br>
+<h3 id=Chapter05> Chapter 05. 다섯번째 </h3>
+
+    <h1 style="text-align: center;"> 웹 프로그래밍 </h1>
+    <div style="background-color: thistle; text-align: center;">
+<span>| <a href="intro.html" target="left"> 인사말 </a> </span>
+<span>| <a href="lecture.html" target="left"> 강의 소개 </a></span>
+<span>| <a href="info.html" target="left"> 담당교수</a></span>
+<span>| <a href="https://eunyoung6.github.io/" target="left"> 웹사이트 </a></span>
+    </div>
+    <hr>
+    <div style="text-align: center;">
+<iframe srcdoc="left" name="left" height="400" width="400"
+                                        style="border: 0px;" sandbox> </iframe>
+<iframe srcdoc="right" name="right" height="400" width="400"> </iframe>
+
+    </div>
+    <hr>
+<div style="background-color: yellowgreen; text-align:center;"> Eunyoung </div>
+
+
+
+
+<br>
+[ <a href=#Top> Top </a> ]
+
 
 </BODY>
 </HTML>
+
