@@ -19,7 +19,7 @@
       }
       @media screen and (min-width: 960px)  {
             html  {
-                  backgroun: blue;
+                  background: blue;
                   color: white;
                   font-weight: bold;
              }
