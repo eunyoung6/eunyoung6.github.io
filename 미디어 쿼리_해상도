@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head><title> 미디어 쿼리 --해상도 </title>
+<meta name="viewoport" content="width=device-width, initial-scale=1.0" />
+<style>
+      @media screen and (max-width: 767px) {
+            html {
+                  background: silver;
+                  color: white;
+                  font-weight: bold;
+             }
+      }
+      @media screen and (min-width: 768px) and (max-width: 959px)  {
+            html  {
+                  background: green;
+                  color: white;
+                  font-weight: bold;
+            }      
+      }
+      @media screen and (min-width: 960px)  {
+            html  {
+                  backgroun: blue;
+                  color: white;
+                  font-weight: bold;
+             }
+       }
+    </style>
+    </Head>
+    
+ <Body>
+      <h1> Web programming </h1>
+      <p> HTML/CSS </p>
+      <p> JavaScript </p>
+  </Body>
+  </HTML>
+               
