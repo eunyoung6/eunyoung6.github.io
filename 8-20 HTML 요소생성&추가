@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<HTML>
+<Head>
+<title> 웹 프로그래밍 </title> </Head>
+<body>
+<div id="div">
+    <p id="p1"> Hello world!!! </p>
+    <p id="p2"> Hello world!!! </p>
+</div>
+<script>
+        var     newElement = document.createElement("p");
+        var     newTextNode = document.createTextNode("Hi~ Clickseo");
+        newElement.appendChild(newTextNode);
+
+        var     element = dicument.getElementById("div1");
+        element.appendChild(newElement);
+</script>
+</body>
+</HTML>
