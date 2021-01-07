@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<HTML>
+<Head>
+<title> 웹 프로그래밍 </title>
+<style>
+    #container {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        background: silver;
+    }
+    #animate {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background-color: blue;
+    }
+</style>
+</Head>
+
+<body>
+    <p><button onclick="mymove()"> Click Animation </button></p>
+    <div id ="container">
+        <div id="animate"> </div>
+    </div>
+
+<script>
+    function mymove() {
+        var     box = document.getElementById("animate");
+        var     pos = 0;
+        var     id = setInterval(frame, 5);
+        function frame() {
+                    if (pos == 350) {
+                        clearTnterval(id);
+                    } else {
+                            pos++;
+                            box.style.top = pos + "px"
+                            box.style.left = pos + "px"
+                    }
+        }
+    }
+</script>
+</body>
+</HTML>
+
