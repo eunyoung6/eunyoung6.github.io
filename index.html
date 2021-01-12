@@ -49,8 +49,59 @@
 </style>
 
 
+<!-- 그림판 만들기 -->
+<script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+    $(document).ready(function() {
+        var     canvas = document.getElementById('canvas')
+        var     context = canvas.getContext('2d');
+
+        $(canvas).on ( {
+            mousedown: function (event) {
+                var position = $(this).offset();
+                var x = event.pageX - position.left;
+                var y = event.pageY - position.top;
+                context.beginPath();  //선 그리기 시작
+                context.moveTo(x,y);  //선 그리기 시작 위치(x,y)
+            },
+            mouseup: function (event) {
+                var position = $(this).offset();
+                var x = event.pageX - position.left;
+                var y = event.pageY - position.top;
+                context.lineTo(x,y); //선 그리지 종료 위치(x,y)
+                context.stroke(); //선 그리기 종료
+            }
+        });
+    });
+</script>
 
 
+<script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+        //on 메소드: map 매개 면수를 사용하여 여러 이벤트 핸들러 연결
+        //          event map ({event: function, event: function, ...})
+        $(document).ready(function() {
+            $("p").on({
+                mouseenter: function (){
+                        $(this).css("background-color", "lightgray");
+                },
+                mouseleave: function () {
+                        $(this).css("background-color", "lightblue")
+                },
+                click: function() {
+                        $(this).css("background-color", "yellow");
+                }
+            });
+        });
+</script>
+
+
+
+
+
+
+
+<!--                                 Body 시작 부분                       -->
 <BODY>
 
    <!-- 고정바 -->
@@ -273,6 +324,18 @@
     </div>
     <hr>
 <div style="background-color: yellowgreen; text-align:center;"> Eunyoung </div>
+
+<br> <div> 
+<fieldset> <legend> [마우스를 가져다 대거나 클릭해 보세요-!!] </legend>
+<p align=center> 나에게 커서를 가져다 주세요-!! </p>
+</fieldset> </div>
+
+
+<br>
+<!--그림판 테이블 영역-->
+<canvas id="canvas" width="700" height="400"
+style="border: 3px solid black"></canvas>
+</canvas>
 
 
 
